@@ -1,6 +1,6 @@
 import React,{useState}from 'react';
 
-
+import Button from './components/buttons';
 
 const App = () => {
   const [ counter, setCounter ] = useState(0)
@@ -8,12 +8,11 @@ const App = () => {
   return (
     <div>
       <div>{counter}</div>
-      <button onClick={() => setCounter(counter + 1)}>
-        Counter
-      </button>
-      <button onClick={() => setCounter(0)}> 
-        Reset
-      </button>
+      <Button onClick = {()=>setCounter(counter + 1)}
+      text = "Increment"/>
+
+      <Button onClick = {()=>setCounter(0)}
+      text = "Reset"/>
     </div>
   )
 }
